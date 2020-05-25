@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>대구지하철 2호선 여행하기</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="short icon" href="img/ico.png" type="img/x-icon">
+    <link rel="icon" href="img/ico.png" type="img/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/d0e7b1fbd2.css">
+    <link href="https://fonts.googleapis.com/css?family=Play|Saira+Semi+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    
+    
+</head>
+
+<body onresize="windowSizeCheck()">
+    <div class = "port_hide">
+        세로모드일 때 작동하지 않습니다. 가로 화면으로 보시고 크롬으로 보시길 바랍니다.
+    </div>    
+    <header>
+        <div class="header_box">
+            <div class="header_top">
+                <div id="logo">
+                    
+                    <a href="index.html" title="home">
+                        <div class="logo_img">
+                           <div class="unofficial_logo">
+                                2
+                            </div>
+                            <img src="img/logo_official.png" alt="official_logo">
+                        </div>
+                        <div class="mainTitle">
+                            <h1>대구지하철 <b>2호선</b> 여행정보</h1>
+                            <span>Daegu Metro <span>Greenline</span> Tour Information</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="search_station">
+                    <label for="searchInput">
+                        <i class="fa fa-subway" aria-hidden="true"></i>
+                        Special Thanks
+                    </label>
+                    
+                    
+                    
+                    
+                </div>
+
+                <div class="calculate">
+                    <span><i class="fa fa-clock-o fa-3x" aria-hidden="true" title="예상탑승시간"></i></span>
+                    <ul class="calculate_box">
+                        <li class="dapart_spot">
+                            <label for="depart_input">출발역</label>
+                            <input type="text" id="depart_input" placeholder="문양역" onkeypress="if(event.keyCode==13){calculate();return false;}">
+                        </li>
+                        <li>
+                            <label for="arrive_input">도착역</label>
+                            <input type="text" id="arrive_input" placeholder="영남대역" onkeypress="if(event.keyCode==13){calculate();return false;}">
+                        </li>
+                        <li>
+                            <span id="calculate_result">00</span>
+                            <span>분 정도 소모</span>
+                        </li>
+                    </ul>
+                    <button onclick="calculate()">계산</button>
+                </div>
+                <div class="alert_noName2 hide_alert">
+                    <p>
+                        <i class="fa fa-frown-o" aria-hidden="true"></i> 해당 노선에 존재하지 않는 역입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <input type="checkbox" id="menu_btn" checked>
+                <div class="gnb">
+                    <div class="call_menu_btn">
+                        <label for="menu_btn">
+                            <div class="menu_triple_barT"></div>
+                            <div class="menu_triple_barM"></div>
+                            <div class="menu_triple_barM"></div>
+                            <div class="menu_triple_barB"></div>
+                        </label>
+                    </div>
+                    <div class="menu_bar">
+                        <ul>
+                            <li><a href="safeui.html" id="ui_des">UI설명서</a></li>
+                            <li><a href="saftyrull.html">안전규칙</a></li>
+                            <li><a href="howToTake.html">탑승방법</a></li>
+                            <li><a href="source.html">소스보기</a></li>
+                            <li><a href="profile.html">이 사이트는?</a></li>
+                            <li><a href="contact.html">연락처</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body_container">
+        <div class="content">
+            
+            <div class="main_content safe_area">
+                
+                <div class="section home">
+                    <div>
+                        <h1>이 홈페이지는 이곳의 도움을 받았습니다.</h1>
+                        <h5>감사합니다.</h5>
+                    </div>
+                    <div class="safe_main">
+                        <i class="fa fa-handshake-o fa-4x" aria-hidden="true"></i>
+                        <i class="fa fa-floppy-o fa-4x" aria-hidden="true"></i>
+                        <i class="fa fa-forward fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <div class="section onland">
+                    
+                    <h3>그래픽, 디자인</h3>
+                    <div class="safe_left">
+                        <img src="img/source/source1.png">
+                        <p>어도비 포토샵</p>
+                        <p>그래픽 작업 많은 부분이</p>
+                        <p>포토삽을 통해 이루어졌습니다.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <img src="img/source/source2.png">
+                        <p><a href="https://thenounproject.com/">https://thenounproject.com/</a></p>
+                        <p>많은 픽토그램을 </p>
+                        <p>여기에서 가져와 응용하였습니다.</p>
+                    </div>
+                    <div class="safe_right">
+                        <img src="img/source/source3.png">
+                        <p><a href="http://fontawesome.io/">http://fontawesome.io/</a></p>
+                        <p>아이콘들은 폰트어썸에서</p>
+                        <p>가져와 사용하였습니다.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section square source">
+                    <div class="dectiption"></div>
+                    <h3>그래픽, 디자인</h3>
+                    <div class="safe_left here_border">
+                        <img src="img/source/source4.png">
+                        <p><a href="http://www.font.co.kr/yoonfont/free/free_daehan.asp">윤디자인</a></p>
+                        <p><a href="https://www.kywa.or.kr/about/about08.jsp">한국청소년활동진흥원</a></p>
+                        <p>한글폰트를 무료로 배포하고 있습니다.</p>
+                    </div>
+                    <div class="safe_middle" id="no_border">
+                        <img src="img/source/source5.png">
+                        <p><a href="https://fonts.google.com/">https://fonts.google.com/</a></p>
+                        <p>구글역시 베타로 한글폰트를 CDN으로</p>
+                        <p>서비스 중입니다. 이미지 역시 많이 도움을 받았습니다.</p>
+                    </div>
+                    <div class="safe_right this_border">
+                        <img src="img/source/source6.png">
+                        <p><a href="http://naver.com"></a></p>
+                        <p>많은 사진들과 나눔글꼴을 </p>
+                        <p>가져와 사용학였습니다.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section platform">
+                    
+                    <h3>프로그래밍</h3>
+                    <div class="safe_left">
+                        <img src="img/source/source7.png">
+                        <p><a href="https://jquery.com/"></a></p>
+                        <p>자바스크립트는</p>
+                        <p>제이쿼리의 도움을 많이 받았습니다.</p>
+                        
+                    </div>
+                    <div class="safe_middle">
+                        <img src="img/source/source8.png">
+                        <p><a href="http://brackets.io/">http://brackets.io/</a></p>
+                        <p>코딩의 대부분은 </p>
+                        <p>어도비 브라켓으로 작성되었습니다.</p>
+                    </div>
+                    <div class="safe_right">
+                        <img src="img/source/source9.png">
+                        <p><a href="https://www.google.co.kr/chrome/browser/desktop/index.html">chrome</a></p>
+                        <p>모든 작동은</p>
+                        <p> 크롬에서 테스트되었습니다.</p>
+                    </div>
+                    
+                </div>
+                <div class="section source" id="wring">
+                    
+                    <h3>주의사항</h3>
+                    <div class="safe_left">
+                        <i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i>
+                        <p>이 사이트는 완전히 연습용입니다.</p>
+                        <p>많은 소스들을 비상업적이라는 이유로</p>
+                        <p>사용하고 있습니다.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <i class="fa fa-flask fa-4x" aria-hidden="true"></i>
+                        <p>이 사이트는 완전히 실험적 구조로</p>
+                        <p>동작하고 있습니다. 환경에 따라</p>
+                        <p>제대로 동작하지 않을 수 있습니다.</p>
+                    </div>
+                    <div class="safe_right">
+                        <i class="fa fa-cc fa-4x" aria-hidden="true"></i>
+                        <p>따라서 모든 소스들은 원저작자의</p>
+                        <p>저작권을 존중해 주세요.</p>
+                        <p>문제가 발생시 저는 책임지지 않습니다.</p>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+            
+            <section class = "footer">
+               <div class="footer_container">
+                    
+                    <div class="train">
+                        
+                    </div>
+                    
+                </div>
+            </section>
+            
+        </div>
+        
+        
+    </div>
+    
+    <script src="js/safety.js"></script>
+</body>
+</html>

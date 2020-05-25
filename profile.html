@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>대구지하철 2호선 여행하기</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="short icon" href="img/ico.png" type="img/x-icon">
+    <link rel="icon" href="img/ico.png" type="img/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/d0e7b1fbd2.css">
+    <link href="https://fonts.googleapis.com/css?family=Play|Saira+Semi+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    
+    
+</head>
+
+<body onresize="windowSizeCheck()">
+    <div class = "port_hide">
+        세로모드일 때 작동하지 않습니다. 가로 화면으로 보시고 크롬으로 보시길 바랍니다.
+    </div>    
+    <header>
+        <div class="header_box">
+            <div class="header_top">
+                <div id="logo">
+                    
+                    <a href="index.html" title="home">
+                        <div class="logo_img">
+                           <div class="unofficial_logo">
+                                2
+                            </div>
+                            <img src="img/logo_official.png" alt="official_logo">
+                        </div>
+                        <div class="mainTitle">
+                            <h1>대구지하철 <b>2호선</b> 여행정보</h1>
+                            <span>Daegu Metro <span>Greenline</span> Tour Information</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="search_station">
+                    <label for="searchInput">
+                        <i class="fa fa-subway" aria-hidden="true"></i>
+                        About
+                    </label>
+                    
+                    
+                    
+                    
+                </div>
+
+                <div class="calculate">
+                    <span><i class="fa fa-clock-o fa-3x" aria-hidden="true" title="예상탑승시간"></i></span>
+                    <ul class="calculate_box">
+                        <li class="dapart_spot">
+                            <label for="depart_input">출발역</label>
+                            <input type="text" id="depart_input" placeholder="문양역" onkeypress="if(event.keyCode==13){calculate();return false;}">
+                        </li>
+                        <li>
+                            <label for="arrive_input">도착역</label>
+                            <input type="text" id="arrive_input" placeholder="영남대역" onkeypress="if(event.keyCode==13){calculate();return false;}">
+                        </li>
+                        <li>
+                            <span id="calculate_result">00</span>
+                            <span>분 정도 소모</span>
+                        </li>
+                    </ul>
+                    <button onclick="calculate()">계산</button>
+                </div>
+                <div class="alert_noName2 hide_alert">
+                    <p>
+                        <i class="fa fa-frown-o" aria-hidden="true"></i> 해당 노선에 존재하지 않는 역입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <input type="checkbox" id="menu_btn" checked>
+                <div class="gnb">
+                    <div class="call_menu_btn">
+                        <label for="menu_btn">
+                            <div class="menu_triple_barT"></div>
+                            <div class="menu_triple_barM"></div>
+                            <div class="menu_triple_barM"></div>
+                            <div class="menu_triple_barB"></div>
+                        </label>
+                    </div>
+                    <div class="menu_bar">
+                        <ul>
+                            <li><a href="safeui.html" id="ui_des">UI설명서</a></li>
+                            <li><a href="saftyrull.html">안전규칙</a></li>
+                            <li><a href="howToTake.html">탑승방법</a></li>
+                            <li><a href="source.html">소스보기</a></li>
+                            <li><a href="profile.html">이 사이트는?</a></li>
+                            <li><a href="contact.html">연락처</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body_container">
+        <div class="content">
+            
+            <div class="main_content safe_area">
+                
+                <div class="section home">
+                    <div>
+                        <h1>소개와 안내</h1>
+                        <h5>이 홈페이지는...</h5>
+                    </div>
+                    <div class="safe_main">
+                        <i class="fa fa-id-card fa-4x" aria-hidden="true"></i>
+                        <i class="fa fa-info fa-4x" aria-hidden="true"></i>
+                        <i class="fa fa-forward fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <div class="section onland">
+                    
+                    <h3>기획의도</h3>
+                    <div class="safe_left">
+                        <div class="pro_img"><i class="fa fa-arrows-h fa-4x" aria-hidden="true"></i></div>
+                        <p>처음 시작은 단순히</p>
+                        <p>세로스크롤형 페이지를 벗어나 보자에서</p>
+                        <p>출발하였습니다.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <div class="pro_img"><i class="fa fa-subway fa-4x" aria-hidden="true"></i></div>
+                        <p>그리고 가로로 긴~ 페이지에</p>
+                        <p>어울리는 컨텐츠로 기차, 지하철을 찾았습니다.</p>
+                        <p>그냥 바나나 사이트로 할 걸 그랬나요?</p>
+                    </div>
+                    <div class="safe_right">
+                        <div class="pro_img"><i class="fa fa-map-signs fa-4x" aria-hidden="true"></i></div>
+                        <p>기왕에 시간들여 만드는 페이지</p>
+                        <p>사람들에게 도움도 되면 좋겠다고</p>
+                        <p>생각하고 만들게 되었습니다.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section square source">
+                    <div class="dectiption"></div>
+                    <h3>기능</h3>
+                    <div class="safe_left here_border">
+                        <div class="pro_img">
+                            <p class="toilet">
+                                <i class="fa fa-female fa-3x" style = 'border-right: 2px solid black'></i>
+                                <i class="fa fa-male fa-3x"></i>
+                            </p>
+                        </div>
+                        <p>역별 시설 정보와 </p>
+                        <p>첫막차 정보를 </p>
+                        <p>매우 간략하게 표시하였습니다.</p>
+                    </div>
+                    <div class="safe_middle" id="no_border">
+                        <img src="img/howtotake/take11.png">
+                        <p>안전규칙과 </p>
+                        <p>2호선의 탑승방법을 </p>
+                        <p>간략히 소개하고 있습니다.</p>
+                    </div>
+                    <div class="safe_right this_border">
+                        <div class="pro_img"><i class="fa fa-clock-o fa-4x" aria-hidden="true"></i></div>
+                        <p>2호선 내에서 </p>
+                        <p>지하철을 얼마나 타게 되는지</p>
+                        <p>계산 할 수 있습니다.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section platform">
+                    
+                    <h3>메뉴소개</h3>
+                    <div class="safe_left">
+                        <div class="pro_img"><i class="fa fa-book fa-4x" aria-hidden="true"></i></div>
+                        <p>UI설명서는 각 페이지별로 </p>
+                        <p>어떤 버튼이 있고 어떤 작동을 </p>
+                        <p>하는지 설명합니다.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <div class="pro_img"><i class="fa fa-exclamation-triangle fa-4x" aria-hidden="true"></i></div>
+                        <p>안전규칙 페이지는</p>
+                        <p>장소별 지하철을 안전하게 타는</p>
+                        <p>규칙을 설명합니다.</p>
+                    </div>
+                    <div class="safe_right">
+                        <img src="img/howtotake/take11.png">
+                        <p>탑승방법은 </p>
+                        <p>지하철이 아직 낯설거나</p>
+                        <p>타지에서 오신 분을 위해 만들었습니다.</p>
+                    </div>
+                    
+                </div>
+                
+                 <div class="section platform">
+                    
+                    <h3>메뉴소개</h3>
+                    <div class="safe_left">
+                        <div class="pro_img"><i class="fa fa-database fa-4x" aria-hidden="true"></i></div>
+                        <p>소스보기는</p>
+                        <p>이 홈페이지를 만들기 위해 사용된</p>
+                        <p>플러그인, 자원, 오픈소스들을 소개합니다.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <div class="pro_img"><i class="fa fa-info-circle fa-4x" aria-hidden="true"></i></div>
+                        <p>이 사이트는?페이지는 </p>
+                        <p>지금 보고 있는 페이지입니다.</p>
+                        <p>홈페이지 전체를 간략히 설명합니다.</p>
+                    </div>
+                    <div class="safe_right">
+                        <div class="pro_img"><i class="fa fa-phone-square fa-4x" aria-hidden="true"></i></div>
+                        <p>연락처는</p>
+                        <p>홈페이지 제작자인 저의 간단한 연락처와</p>
+                        <p>대구지하철의 공식페이지를 남겨두었습니다.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section source" id="wring">
+                    
+                    <h3>주의사항</h3>
+                    <div class="safe_left">
+                        <i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i>
+                        <p>이 사이트는 완전히 연습용입니다.</p>
+                        <p>상업적인 목적이 없고, 많은 정보들이</p>
+                        <p>사실은 그닥 도움이 안될 수도 있습니다.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <i class="fa fa-flask fa-4x" aria-hidden="true"></i>
+                        <p>이 사이트는 보안기능이 없으므로,</p>
+                        <p>데이터가 저장되지는 않습니다만</p>
+                        <p>입력부분에 비밀번호 등을 입력하지 마세요.</p>
+                    </div>
+                    <div class="safe_right">
+                        <i class="fa fa-cc fa-4x" aria-hidden="true"></i>
+                        <p>전체적 아이디어와 구조, </p>
+                        <p>CSS스타일, 스크립트는</p>
+                        <p>별다른 통지없이도 사용 가능합니다.</p>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+            
+            <section class = "footer">
+               <div class="footer_container">
+                    
+                    <div class="train">
+                        
+                    </div>
+                    
+                </div>
+            </section>
+            
+        </div>
+        
+        
+    </div>
+    
+    <script src="js/safety.js"></script>
+</body>
+</html>

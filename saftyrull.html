@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>대구지하철 2호선 여행하기</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="short icon" href="img/ico.png" type="img/x-icon">
+    <link rel="icon" href="img/ico.png" type="img/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/d0e7b1fbd2.css">
+    <link href="https://fonts.googleapis.com/css?family=Play|Saira+Semi+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    
+    
+</head>
+
+<body onresize="windowSizeCheck()">
+    <div class = "port_hide">
+        세로모드일 때 작동하지 않습니다. 가로 화면으로 보시고 크롬으로 보시길 바랍니다.
+    </div>    
+    <header>
+        <div class="header_box">
+            <div class="header_top">
+                <div id="logo">
+                    
+                    <a href="index.html" title="home">
+                        <div class="logo_img">
+                           <div class="unofficial_logo">
+                                2
+                            </div>
+                            <img src="img/logo_official.png" alt="official_logo">
+                        </div>
+                        <div class="mainTitle">
+                            <h1>대구지하철 <b>2호선</b> 여행정보</h1>
+                            <span>Daegu Metro <span>Greenline</span> Tour Information</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="search_station">
+                    <label for="searchInput">
+                        <i class="fa fa-subway" aria-hidden="true"></i>
+                        나와 타인을 위한 약속!
+                    </label>
+                    
+                    
+                    
+                    
+                </div>
+
+                <div class="calculate">
+                    <span><i class="fa fa-clock-o fa-3x" aria-hidden="true" title="예상탑승시간"></i></span>
+                    <ul class="calculate_box">
+                        <li class="dapart_spot">
+                            <label for="depart_input">출발역</label>
+                            <input type="text" id="depart_input" placeholder="문양역" onkeypress="if(event.keyCode==13){calculate();return false;}">
+                        </li>
+                        <li>
+                            <label for="arrive_input">도착역</label>
+                            <input type="text" id="arrive_input" placeholder="영남대역" onkeypress="if(event.keyCode==13){calculate();return false;}">
+                        </li>
+                        <li>
+                            <span id="calculate_result">00</span>
+                            <span>분 정도 소모</span>
+                        </li>
+                    </ul>
+                    <button onclick="calculate()">계산</button>
+                </div>
+                <div class="alert_noName2 hide_alert">
+                    <p>
+                        <i class="fa fa-frown-o" aria-hidden="true"></i> 해당 노선에 존재하지 않는 역입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <input type="checkbox" id="menu_btn" checked>
+                <div class="gnb">
+                    <div class="call_menu_btn">
+                        <label for="menu_btn">
+                            <div class="menu_triple_barT"></div>
+                            <div class="menu_triple_barM"></div>
+                            <div class="menu_triple_barM"></div>
+                            <div class="menu_triple_barB"></div>
+                        </label>
+                    </div>
+                    <div class="menu_bar">
+                        <ul>
+                            <li><a href="safeui.html" id="ui_des">UI설명서</a></li>
+                            <li><a href="saftyrull.html">안전규칙</a></li>
+                            <li><a href="howToTake.html">탑승방법</a></li>
+                            <li><a href="source.html">소스보기</a></li>
+                            <li><a href="profile.html">이 사이트는?</a></li>
+                            <li><a href="contact.html">연락처</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body_container">
+        <div class="content">
+            
+            <div class="main_content safe_area">
+                
+                <div class="section home">
+                    <div>
+                        <h1>안전규칙 정보</h1>
+                        <h5>편리한 대구지하철 2호선. 더 안전하게, 더 편리하게</h5>
+                    </div>
+                    <div class="safe_main">
+                        <i class="fa fa-thumbs-o-up fa-4x" aria-hidden="true"></i>
+                        <i class="fa fa-exclamation-triangle fa-4x" aria-hidden="true"></i>
+                        <i class="fa fa-forward fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <div class="section onland">
+                    
+                    <h3>지상에서</h3>
+                    <div class="safe_left">
+                        <img src="img/safty/safe1.png">
+                        <p>내려가는 계단에서</p>
+                        <p>뛰거나 장난쳐 다치지 않도록 하십시오.</p>
+                        <p>노약자는 승강기를 타거나</p>
+                        <p>역무원을 부르십시오.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <img src="img/safty/safe2.png">
+                        <p>엘리베이터는</p>
+                        <p>노약자를 배려하며 차례로 타십시오.</p>
+                        <p>문에 기대지 말고, </p>
+                        <p>억지로 열지 마십시오.</p>
+                    </div>
+                    <div class="safe_right">
+                        <img src="img/safty/safe3.png">
+                        <p>에스컬레이터에서는 손잡이를 잡고,</p>
+                        <p>뛰거나 장난치지 마십시오.</p>
+                        <p>노란 안전선 안쪽에 서야하고,</p>
+                        <p>머리를 내밀지 마세요.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section square">
+                    <div class="dectiption"></div>
+                    <h3>대합실에서</h3>
+                    <div class="safe_left here_border">
+                        <img src="img/safty/safe4.png">
+                        <p>쓰레기는 쓰레기통에 버립니다.</p>
+                        <p>함부로 버린 쓰레기는</p>
+                        <p>화재의 원인이 되거나 통행에 방해가 됩니다.</p>
+                    </div>
+                    <div class="safe_middle" id="no_border">
+                        <img src="img/safty/safe5.png">
+                        <p>수상한 사람을 보면 즉시 신고하십시오.</p>
+                        <p>수상한 물건을 발견하면 절대 만지지말고</p>
+                        <p>역시 신고하도록 하십시오.</p>
+                    </div>
+                    <div class="safe_right this_border">
+                        <img src="img/safty/safe6.png">
+                        <p>급하거나 지갑을 안가져왔다고</p>
+                        <p>개찰구를 뛰어넘지 마세요.</p>
+                        <p>비도덕적이고 다칠 위험이 있습니다.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section platform">
+                    
+                    <h3>승강장에서</h3>
+                    <div class="safe_left">
+                        <img src="img/safty/safe7.png">
+                        <p>차례로 줄을 서서 기다려야합니다.</p>
+                        <p>스크린도어에 기대거나 </p>
+                        <p>강제로 열어서는 안됩니다.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <img src="img/safty/safe8.png">
+                        <p>점검, 고장 등의 이유로</p>
+                        <p>스크린도어가 열려있다고,</p>
+                        <p>호기심에 들여다보거나 하면 위헙합니다.</p>
+                    </div>
+                    <div class="safe_right">
+                        <img src="img/safty/safe9.png">
+                        <p>너무 심하게 놀지 마세요.</p>
+                        <p>바닥이 미끄럽습니다.</p>
+                        <p>비상정지버튼 등을 함부로 누르지 마세요.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section intrain">
+                    
+                    <h3>열차 안에서</h3>
+                    <div class="safe_left">
+                        <img src="img/safty/safe10.png">
+                        <p>약자를 배려하는 모습이 아름답습니다.</p>
+                        <p>서서가는 당신은 </p>
+                        <p>손잡이를 잡아주세요.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <img src="img/safty/safe11.png">
+                        <p>긴급상황시 역무원과 연락할 수 있습니다.</p>
+                        <p>미리 무전기와 소화기 등의 위치를 봐둡니다.</p>
+                        <p>함부로 열차의 문을 수동으로 열지 마세요.</p>
+                    </div>
+                    <div class="safe_right">
+                        <img src="img/safty/safe12.png">
+                        <p>천장 손잡이는 체조용이 아닙니다.</p>
+                        <p>안에서 담배를 피는 몰상식은 참아주세요.</p>
+                        <p>연결통로에 서 있으면 안됩니다.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section exiting">
+                    
+                    <h3>나가며, 그리고 기타</h3>
+                    <div class="safe_left">
+                        <img src="img/safty/safe13.png">
+                        <p>열차와 승강장 사이에 틈을 조심.</p>
+                        <p>혼잡한 역에서 일행과 떨어지지 않도록 하세요.</p>
+                        <p>특히 아이를 놓치지 않도록 주의해야 합니다.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <img src="img/safty/safe14.png">
+                        <p>환승역에서는 방향을 잘 보고 이동하세요.</p>
+                        <p>환승역은 매우 혼잡합니다.</p>
+                        <p>승객끼리 부딪혀 다치지 않도록 합니다.</p>
+                    </div>
+                    <div class="safe_right">
+                        <img src="img/safty/safe15.png">
+                        <p>비상문을 어떻게 여는지 미리 알아두세요.</p>
+                        <p>비상시가 아닐때는 열지 마세요.</p>
+                        <p>통제구역에 역무원 허락없이 들어가지 마세요.</p>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+            
+            <section class = "footer">
+               <div class="footer_container">
+                    
+                    <div class="train">
+                        
+                    </div>
+                    
+                </div>
+            </section>
+            
+        </div>
+        
+        
+    </div>
+    
+    <script src="js/safety.js"></script>
+</body>
+</html>

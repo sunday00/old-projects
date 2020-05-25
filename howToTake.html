@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>대구지하철 2호선 여행하기</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="short icon" href="img/ico.png" type="img/x-icon">
+    <link rel="icon" href="img/ico.png" type="img/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/d0e7b1fbd2.css">
+    <link href="https://fonts.googleapis.com/css?family=Play|Saira+Semi+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    
+    
+</head>
+
+<body onresize="windowSizeCheck()">
+    <div class = "port_hide">
+        세로모드일 때 작동하지 않습니다. 가로 화면으로 보시고 크롬으로 보시길 바랍니다.
+    </div>    
+    <header>
+        <div class="header_box">
+            <div class="header_top">
+                <div id="logo">
+                    
+                    <a href="index.html" title="home">
+                        <div class="logo_img">
+                           <div class="unofficial_logo">
+                                2
+                            </div>
+                            <img src="img/logo_official.png" alt="official_logo">
+                        </div>
+                        <div class="mainTitle">
+                            <h1>대구지하철 <b>2호선</b> 여행정보</h1>
+                            <span>Daegu Metro <span>Greenline</span> Tour Information</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="search_station">
+                    <label for="searchInput">
+                        <i class="fa fa-subway" aria-hidden="true"></i>
+                        정당한 승차권으로 즐거운 여행!
+                    </label>
+                    
+                    
+                    
+                    
+                </div>
+
+                <div class="calculate">
+                    <span><i class="fa fa-clock-o fa-3x" aria-hidden="true" title="예상탑승시간"></i></span>
+                    <ul class="calculate_box">
+                        <li class="dapart_spot">
+                            <label for="depart_input">출발역</label>
+                            <input type="text" id="depart_input" placeholder="문양역" onkeypress="if(event.keyCode==13){calculate();return false;}">
+                        </li>
+                        <li>
+                            <label for="arrive_input">도착역</label>
+                            <input type="text" id="arrive_input" placeholder="영남대역" onkeypress="if(event.keyCode==13){calculate();return false;}">
+                        </li>
+                        <li>
+                            <span id="calculate_result">00</span>
+                            <span>분 정도 소모</span>
+                        </li>
+                    </ul>
+                    <button onclick="calculate()">계산</button>
+                </div>
+                <div class="alert_noName2 hide_alert">
+                    <p>
+                        <i class="fa fa-frown-o" aria-hidden="true"></i> 해당 노선에 존재하지 않는 역입니다.
+                    </p>
+                </div>
+            </div>
+            <div class="header_bottom">
+                <input type="checkbox" id="menu_btn" checked>
+                <div class="gnb">
+                    <div class="call_menu_btn">
+                        <label for="menu_btn">
+                            <div class="menu_triple_barT"></div>
+                            <div class="menu_triple_barM"></div>
+                            <div class="menu_triple_barM"></div>
+                            <div class="menu_triple_barB"></div>
+                        </label>
+                    </div>
+                    <div class="menu_bar">
+                        <ul>
+                            <li><a href="safeui.html" id="ui_des">UI설명서</a></li>
+                            <li><a href="saftyrull.html">안전규칙</a></li>
+                            <li><a href="howToTake.html">탑승방법</a></li>
+                            <li><a href="source.html">소스보기</a></li>
+                            <li><a href="profile.html">이 사이트는?</a></li>
+                            <li><a href="contact.html">연락처</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="body_container">
+        <div class="content">
+            
+            <div class="main_content safe_area">
+                
+                <div class="section home">
+                    <div>
+                        <h1>탑승방법</h1>
+                        <h5>편리한 대구지하철 2호선. 이렇게 탑승합니다.</h5>
+                    </div>
+                    <div class="safe_main">
+                        <i class="fa fa-credit-card-alt fa-4x" aria-hidden="true"></i>
+                        <i class="fa fa-map-signs fa-4x" aria-hidden="true"></i>
+                        <i class="fa fa-forward fa-4x" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <div class="section onland">
+                    
+                    <h3>지상에서</h3>
+                    <div class="safe_left">
+                        <img src="img/howtotake/take1.png">
+                        <p>손잡이를 잡고 조심히 내려가세요.</p>
+                        <p>왕복이 예정된 경우, 반대쪽 출구를 </p>
+                        <p>미리 알아두면 편리합니다.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <img src="img/howtotake/take2.png">
+                        <p>내리는 사람 우선으로 탑승합니다.</p>
+                        <p>내려갈 층의 버튼을 누르고 기다립니다.</p>
+                        <p>가능하면 계단을 사용합니다.</p>
+                    </div>
+                    <div class="safe_right">
+                        <img src="img/howtotake/take3.png">
+                        <p>방향을 확인하고 탑승하세요.</p>
+                        <p>이미 탑승하여 내려가는 중일때는 </p>
+                        <p>억지로 올라가려 하지 마세요.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section square">
+                    <div class="dectiption"></div>
+                    <h3>탑승권의 구매, 교통카드 충전</h3>
+                    <div class="safe_left here_border">
+                        <img src="img/howtotake/take4.png">
+                        <p>발매기에서 일반/어린이 버튼을 누릅니다.</p>
+                        <p>구매갯수를 선택하고 돈을 넣습니다.</p>
+                        <p>거리와 무관하게 요금은 통일입니다.</p>
+                        <p>예쁘게 생긴 토큰과 잔돈을 챙깁니다.</p>
+                    </div>
+                    <div class="safe_middle" id="no_border">
+                        <img src="img/howtotake/take5.png">
+                        <p>대경교통카드를 충전위치에 올려놓습니다.</p>
+                        <p>인식되면 충전금액을 천원단위로 선택하고</p>
+                        <p>지폐를 투입 후 잠시 기다립니다.</p>
+                        <p>잔돈과 카드를 챙겨 갑니다.</p>
+                    </div>
+                    <div class="safe_right this_border">
+                        <img src="img/howtotake/take6.png">
+                        <p>선불형 교통카드나 티머니는 </p>
+                        <p>해당 충전방법을 따로 알아두세요.</p>
+                        <p>교통카드충전기에서는 티머니 충전 불가.</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="section platform">
+                    
+                    <h3>개찰구통과와 열차 탑승</h3>
+                    <div class="safe_left">
+                        <img src="img/howtotake/take7.png">
+                        <p>개찰구가 나눠진 곳에서는 </p>
+                        <p>탑승방향을 잘 보고 들어가세요</p>
+                        <p>잘못들어서면 역무원에게 얘기하세요</p>
+                        
+                    </div>
+                    <div class="safe_middle">
+                        <img src="img/safty/safe7.png">
+                        <p>문이 완전히 열리면 탑승하고 </p>
+                        <p>사람들이 먼저 내리고</p>
+                        <p>나중에 탑승합니다.</p>
+                        
+                    </div>
+                    <div class="safe_right">
+                        <img src="img/howtotake/take9.png">
+                        <p>차례로 두줄로 기다립니다.</p>
+                        <p>혼잡한 칸은 바닥에 설명되어 있습니다.</p>
+                        <p>옆 칸을 타는 것이 편리합니다.</p>
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="section exiting">
+                    
+                    <h3>도착한 후에는</h3>
+                    <div class="safe_left">
+                        <img src="img/safty/safe13.png">
+                        <p>미리 내릴 역 전에 준비하세요.</p>
+                        <p>문이 완전히 열리면 내리세요.</p>
+                        <p>탑승객과 부딪힘에 주의하세요.</p>
+                    </div>
+                    <div class="safe_middle">
+                        <img src="img/howtotake/take11.png">
+                        <p>1회용 승차권은 반납하세요.</p>
+                        <p>개찰구 동전 구멍같은 곳에 넣습니다.</p>
+                        <p>보증금반환 없어요... 양심껏 반납하세요.</p>
+                    </div>
+                    <div class="safe_right">
+                        <img src="img/howtotake/take12.png">
+                        <p>천장의 안내표지에 따라</p>
+                        <p>나가는 방향을 잘 판단하여 </p>
+                        <p>올바른 출구번호를 찾아 안전히 나가세요.</p>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+            
+            <section class = "footer">
+               <div class="footer_container">
+                    
+                    <div class="train">
+                        
+                    </div>
+                    
+                </div>
+            </section>
+            
+        </div>
+        
+        
+    </div>
+    
+    <script src="js/safety.js"></script>
+</body>
+</html>
