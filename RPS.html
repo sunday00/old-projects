@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>RandomeGame!_RPS</title>
+    <link rel="short icon" href="img/ico.png" type="img/x-icon">
+    <link rel="icon" href="img/ico.png" type="img/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Flamenco:300|Monoton|Press+Start+2P|Righteous|Wire+One|Yanone+Kaffeesatz:200" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/d0e7b1fbd2.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo/logo.png" alt="logo" id="logoImg">
+                <span>Simple Random Game</span>
+            </a>
+        </div>
+        <nav class="gnb">
+            <div class="nav_item" id="nav_item1">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-home" aria-hidden="true"></i>
+                     <i class="fa fa-question-circle" aria-hidden="true"></i>
+                     <i class="fa fa-info-circle" aria-hidden="true"></i><br>
+                     <a href="#">ABOUT</a>
+                </div>
+            </div>
+            
+            <div class="nav_item" id="nav_item2">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-trophy" aria-hidden="true"></i>
+                     <i class="fa fa-money" aria-hidden="true"></i>
+                     <i class="fa fa-thumbs-up" aria-hidden="true"></i><br>
+                     <a href="lotto.html">Lotto</a>
+                </div>
+            </div>
+            <div class="nav_item" id="nav_item3">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+                     <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+                     <i class="fa fa-hand-scissors-o fa-rotate-90" aria-hidden="true"></i><br />
+                     <a href="#">R.P.S.</a>
+                </div>
+            </div>
+            <div class="nav_item" id="nav_item4">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-database" aria-hidden="true"></i>
+                     <i class="fa fa-cubes" aria-hidden="true"></i>
+                     <i class="fa fa-forward fa-rotate-270" aria-hidden="true"></i><br>
+                     <a href="#">End31</a>
+                </div>
+            </div>
+            <div class="nav_item" id="nav_item5">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-eye" aria-hidden="true"></i>
+                     <i class="fa fa-css3" aria-hidden="true"></i>
+                     <i class="fa fa-fort-awesome" aria-hidden="true"></i><br>
+                     <a href="#">Source</a>
+                </div>
+            </div>
+            <div class="nav_item" id="nav_item6">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                     <i class="fa fa-compass" aria-hidden="true"></i>
+                     <i class="fa fa-archive" aria-hidden="true"></i><br>
+                     <a href="#">Random</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="RPS">
+       
+        <div class="down_arrow">
+            <H1>
+                <div class="down_sign">
+                    <i class="fa fa-chevron-right fa-rotate-90" aria-hidden="true"></i><br />
+                    <i class="fa fa-chevron-right fa-rotate-90" aria-hidden="true"></i><br />
+                </div>
+            </H1>    
+        </div>
+        
+        <div class="main_contents">
+           
+            <div class="title_area">
+               
+                <h1>
+                     <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+                     <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+                     <i class="fa fa-hand-scissors-o fa-rotate-90" aria-hidden="true"></i><br />
+                    <span>RockO. Paper* ScissorsV. </span>
+                </h1>
+                
+                <div class="desc">
+                    <p>
+                        1. Choose button You may beat the Computer.<br />
+                        2. Rull is completely equal to realworld RPS.<br />
+                        &nbsp; Rock is stronger than Scissors, <br />
+                        &nbsp; Scissors is stornger than Paper, <br />
+                        &nbsp; Paper is stronger than Rock.<br />
+                        &nbsp; &nbsp;<small>(Like President appoint Judge Leader,<br />
+                        &nbsp; &nbsp; Judges can impeach president,<br />
+                        &nbsp; &nbsp; But need  Decision from Assembly,<br />
+                        &nbsp; &nbsp; and President can block proclaimming a law. XD)</small><br />
+                        3. Unfortunately, this system can't support lizard and Spock and something expansion pack rull. Sorry about that... T.T;;
+                    </p>
+                </div>
+                
+            </div>
+            
+            <div class="main_area">
+                
+                <div class="cpu_dis">
+                    
+                    <div class="cpu_box">
+                        <i class="fa fa-television" aria-hidden="true"></i>
+                    </div>
+                    
+                    <div class="cpu_choose">
+                        <i class="fa fa-hand-rock-o" aria-hidden="true" id="computer_hand"></i>
+                    </div>
+                    
+                </div>
+                
+                
+                <div class="rps_result">
+                    
+                    <h1 class="rps_victory hide" id='rpc_text_vic'>Victory!!</h1>
+                    <h1 class="rps_lose hide" id='rpc_text_los'>You lose... T . T</h1>
+                    <h1 class="rps_even hide" id='rpc_text_even'>Draw. Retry!</h1>
+                    
+                </div>
+                
+                
+                
+                <div class="rps_btn_area">
+                    
+                    <div class="btn_r btnbtn">
+                        
+                        <button class="rps_btn fa-stack fa-lg" id="rps_btn_r">
+                        <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                        <i class="fa fa-hand-rock-o fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                        </button>
+                        
+                    </div>
+                    
+                    <div class="btn_p btnbtn">
+                        
+                        <button class="rps_btn fa-stack fa-lg" id="rps_btn_p">
+                        <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                        <i class="fa fa-hand-paper-o fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                        </button>
+                        
+                    </div>
+                    
+                    <div class="btn_s btnbtn">
+                        
+                        <button class="rps_btn fa-stack fa-lg" id="rps_btn_s">
+                        <i class="fa fa-circle fa-stack-2x" aria-hidden="true"></i>
+                        <i class="fa fa-hand-scissors-o fa-stack-1x fa-inverse fa-rotate-90" aria-hidden="true"></i>
+                        </button>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="rps_totalresult">
+                    
+                    <h3 class="total_text">N o w . . .</h3>
+                    <h4 class="total_text">W i n &nbsp; : &nbsp;<b id="rps_win"></b></h4>
+                    <h4 class="total_text">L o s e &nbsp; : &nbsp;<b id="rps_lose"></b></h4>
+                    <br/><br/>
+                </div>
+                
+                <script>
+
+                    var user_select;
+                    var win_time = 0;
+                    var lose_time = 0;
+                    
+                    document.getElementById('rps_btn_r').addEventListener('click', function(){rpsFunc('rr')}); 
+                    
+                    document.getElementById('rps_btn_p').addEventListener('click', function(){rpsFunc('pp')});
+                    
+                    document.getElementById('rps_btn_s').addEventListener('click', function(){rpsFunc('ss')});
+                    
+                    
+                    
+                    
+                    function rpsFunc (user_select_hand){
+                        $('.rps_result').animate({
+                            opacity:0},
+                            function(){
+                                $('.rps_result').animate({
+                                    opacity:1
+                                }, 100)
+                            });
+                        user_select = user_select_hand;
+                        console.log(user_select);
+                        
+                        var computer_select_number=Math.ceil(Math.random()*3);
+                        console.log(computer_select_number);
+                        
+                        var computer_select;
+                        if (computer_select_number == 1){
+                            computer_select = 'computer_rock';
+                            $('#computer_hand').removeClass('fa-hand-paper-o').removeClass('fa-hand-scissors-o').removeClass('fa-rotate-90').addClass('fa-hand-rock-o');
+                            console.log('computer:rock');
+                        }
+                        else if (computer_select_number == 2){
+                            computer_select = 'computer_paper';
+                            $('#computer_hand').removeClass('fa-hand-rock-o').removeClass('fa-hand-scissors-o').removeClass('fa-rotate-90').addClass('fa-hand-paper-o');
+                            console.log('computer:paper');
+                        }
+                        else if (computer_select_number == 3){
+                            computer_select = 'computer_scissors';
+                            $('#computer_hand').removeClass('fa-hand-paper-o').removeClass('fa-hand-rock-o').addClass('fa-hand-scissors-o').addClass('fa-rotate-90');
+                            console.log('computer:scissors');
+                        }
+                        
+                        if(user_select=='rr'){
+                            switch (computer_select_number){
+                                case 1 : 
+                                    $('.rps_victory').removeClass('unhide').addClass('hide');
+                                    $('.rps_lose').removeClass('unhide').addClass('hide');
+                                    $('.rps_even').removeClass('hide').addClass('unhide');
+                                    break;
+                                case 2 : 
+                                    $('.rps_victory').removeClass('unhide').addClass('hide');
+                                    $('.rps_even').removeClass('unhide').addClass('hide');
+                                    $('.rps_lose').removeClass('hide').addClass('unhide');
+                                    lose_time = lose_time + 1;
+                                    break;
+                                case 3 : 
+                                    $('.rps_even').removeClass('unhide').addClass('hide');
+                                    $('.rps_lose').removeClass('unhide').addClass('hide');
+                                    $('.rps_victory').removeClass('hide').addClass('unhide');
+                                    win_time = win_time + 1;
+                                    break;
+                            }
+                        }
+                            if(user_select=='pp'){
+                                switch (computer_select_number){
+                                    case 1 : 
+                                        $('.rps_even').removeClass('unhide').addClass('hide');
+                                        $('.rps_lose').removeClass('unhide').addClass('hide');
+                                        $('.rps_victory').removeClass('hide').addClass('unhide');
+                                        win_time = win_time + 1;
+                                        break;
+                                    case 2 : 
+                                        $('.rps_victory').removeClass('unhide').addClass('hide');
+                                        $('.rps_lose').removeClass('unhide').addClass('hide');
+                                        $('.rps_even').removeClass('hide').addClass('unhide');
+                                        break;
+                                    case 3 : 
+                                        $('.rps_victory').removeClass('unhide').addClass('hide');
+                                        $('.rps_even').removeClass('unhide').addClass('hide');
+                                        $('.rps_lose').removeClass('hide').addClass('unhide');
+                                        lose_time = lose_time + 1;
+                                        break;
+                                }
+                            }
+                            
+                            if(user_select=='ss'){
+                                switch (computer_select_number){
+                                    case 1 : 
+                                        $('.rps_victory').removeClass('unhide').addClass('hide');
+                                        $('.rps_even').removeClass('unhide').addClass('hide');
+                                        $('.rps_lose').removeClass('hide').addClass('unhide');
+                                        lose_time = lose_time + 1;
+                                        break;
+                                    case 2 : 
+                                        $('.rps_even').removeClass('unhide').addClass('hide');
+                                        $('.rps_lose').removeClass('unhide').addClass('hide');
+                                        $('.rps_victory').removeClass('hide').addClass('unhide');
+                                        win_time = win_time + 1;
+                                        break;
+                                    case 3 : 
+                                        $('.rps_victory').removeClass('unhide').addClass('hide');
+                                        $('.rps_lose').removeClass('unhide').addClass('hide');
+                                        $('.rps_even').removeClass('hide').addClass('unhide');
+                                        break;
+                                }
+                            }
+                        
+                        document.getElementById('rps_win').innerHTML=win_time;
+                        document.getElementById('rps_lose').innerHTML=lose_time;
+                        
+                    };
+                    
+                    document.getElementById('rps_win').innerHTML=win_time;
+                    document.getElementById('rps_lose').innerHTML=lose_time;
+                    
+                    
+                </script>
+                
+            </div>
+            
+        </div>
+        
+        <div class="down_arrow">
+            <H1>
+                <div class="down_sign">
+                    <i class="fa fa-chevron-right fa-rotate-90" aria-hidden="true"></i><br />
+                    <i class="fa fa-chevron-right fa-rotate-90" aria-hidden="true"></i><br />
+                </div>
+            </H1>    
+        </div>
+        
+    </section>
+    
+    <div class="goTop">
+        <a href="#logoImg" class="fa-stack fa-lg">
+            <i class="fa fa-forward fa-rotate-270 fa-stack-1x" aria-hidden="true"></i>
+            <i class="fa fa-circle-o fa-stack-2x"></i>
+        </a>
+    </div>
+    
+    <footer>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo/logo.png" alt="logo" id="logoImg">
+                <span>Simple <br /> Random Game</span>
+            </a>
+        </div>
+        <div class="footer_right">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>contact : <a href="mailto:kind65505256@gmail.com">kind65505256@gmail.com</a></span> <br />
+            <i class="fa fa-registered" aria-hidden="true"></i>
+            <span>SUNDAY00 right reserved</span>
+        </div>
+    </footer>
+    <script src="link.js"></script>
+</body>
+</html>

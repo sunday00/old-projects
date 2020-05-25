@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>RandomeGame!_End31</title>
+    <link rel="short icon" href="img/ico.png" type="img/x-icon">
+    <link rel="icon" href="img/ico.png" type="img/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Flamenco:300|Monoton|Press+Start+2P|Righteous|Teko|Wire+One|Yanone+Kaffeesatz:200" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/d0e7b1fbd2.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo/logo.png" alt="logo" id="logoImg">
+                <span>Simple Random Game</span>
+            </a>
+        </div>
+        <nav class="gnb">
+            <div class="nav_item" id="nav_item1">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-home" aria-hidden="true"></i>
+                     <i class="fa fa-question-circle" aria-hidden="true"></i>
+                     <i class="fa fa-info-circle" aria-hidden="true"></i><br>
+                     <a href="about.html">ABOUT</a>
+                </div>
+            </div>
+            
+            <div class="nav_item" id="nav_item2">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-trophy" aria-hidden="true"></i>
+                     <i class="fa fa-money" aria-hidden="true"></i>
+                     <i class="fa fa-thumbs-up" aria-hidden="true"></i><br>
+                     <a href="lotto.html">Lotto</a>
+                </div>
+            </div>
+            <div class="nav_item" id="nav_item3">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-hand-rock-o" aria-hidden="true"></i>
+                     <i class="fa fa-hand-paper-o" aria-hidden="true"></i>
+                     <i class="fa fa-hand-scissors-o fa-rotate-90" aria-hidden="true"></i><br />
+                     <a href="RPS.html">R.P.S.</a>
+                </div>
+            </div>
+            <div class="nav_item" id="nav_item4">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-database" aria-hidden="true"></i>
+                     <i class="fa fa-cubes" aria-hidden="true"></i>
+                     <i class="fa fa-forward fa-rotate-270" aria-hidden="true"></i><br>
+                     <a href="#">End31</a>
+                </div>
+            </div>
+            <div class="nav_item" id="nav_item5">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-eye" aria-hidden="true"></i>
+                     <i class="fa fa-css3" aria-hidden="true"></i>
+                     <i class="fa fa-fort-awesome" aria-hidden="true"></i><br>
+                     <a href="source">Source</a>
+                </div>
+            </div>
+            <div class="nav_item" id="nav_item6">
+                <div class="navItem_outBox"></div>
+                <div class="navItem_inBox"></div>
+                <div class="navItem_Item">
+                     <i class="fa fa-question-circle-o" aria-hidden="true"></i>
+                     <i class="fa fa-compass" aria-hidden="true"></i>
+                     <i class="fa fa-archive" aria-hidden="true"></i><br>
+                     <a href="#">Random</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="baskin">
+       
+        <div class="down_arrow">
+            <H1>
+                <div class="down_sign">
+                    <i class="fa fa-chevron-right fa-rotate-90" aria-hidden="true"></i><br />
+                    <i class="fa fa-chevron-right fa-rotate-90" aria-hidden="true"></i><br />
+                </div>
+            </H1>    
+        </div>
+        
+        <div class="main_contents">
+           
+            <div class="title_area">
+               
+                <h1>
+                    <i class="fa fa-database" aria-hidden="true"></i>
+                     <i class="fa fa-cubes" aria-hidden="true"></i>
+                     <i class="fa fa-forward fa-rotate-270" aria-hidden="true"></i><br />
+                    <span>Baskin Robbins 31 Game!</span>
+                </h1>
+                
+                <div class="desc">
+                    <p>
+                        1. Count number from zero.<br />
+                        2. You can add 1~3 from last number when your turn.<br />
+                        3. As the number grows, finally, reaches 31. <br /> 
+                        4. A Player who counts number 31 is lose.
+                    </p>
+                </div>
+                
+            </div>
+            
+            <div class="main_area">
+                
+                <baskin class="contents">
+                    
+                    <div class="br_com_select_area">
+                        <div class="com_icon">
+                            <i class="fa fa-desktop" aria-hidden="true"></i>
+                            <p id="br_com_start" class="hide">First!</p>
+                        </div>
+                        <div class="com_count">
+                            <div class="com_count_number"></div>
+                            <div class="com_count_number"></div>
+                            <div class="com_count_number"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="br_status_area">
+                       <div class="br_count-top">
+                            <div class="br_count_25">
+                                <div class="br_counted">1</div>
+                                <div class="br_counted">2</div>
+                                <div class="br_counted">3</div>
+                                <div class="br_counted">4</div>
+                                <div class="br_counted">5</div>
+                                <div class="br_counted">6</div>
+                                <div class="br_counted">7</div>
+                                <div class="br_counted">8</div>
+                            </div>
+                            <div class="br_count_50">
+                                <div class="br_counted">9</div>
+                                <div class="br_counted">10</div>
+                                <div class="br_counted">11</div>
+                                <div class="br_counted">12</div>
+                                <div class="br_counted">13</div>
+                                <div class="br_counted">14</div>
+                                <div class="br_counted">15</div>
+                                <div class="br_counted">16</div>
+                            </div>
+                        </div>
+                        <div class="br_count-bottom">
+                            <div class="br_count_75">
+                                <div class="br_counted">17</div>
+                                <div class="br_counted">18</div>
+                                <div class="br_counted">19</div>
+                                <div class="br_counted">20</div>
+                                <div class="br_counted">21</div>
+                                <div class="br_counted">22</div>
+                                <div class="br_counted">23</div>
+                                <div class="br_counted">24</div>
+                            </div>
+                            <div class="br_count_100">
+                                <div class="br_counted">25</div>
+                                <div class="br_counted">26</div>
+                                <div class="br_counted">27</div>
+                                <div class="br_counted">28</div>
+                                <div class="br_counted">29</div>
+                                <div class="br_counted">30</div>
+                                <div class="br_counted">31</div>
+                                <div class="br_counted32"><i class="fa fa-frown-o" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="br_result_area">
+                        <h1 class="br_victory hide" id='rpc_text_vic'>Victory!!</h1>
+                        <h1 class="br_lose hide" id='rpc_text_los'>You lose... T . T</h1>
+                        <button><div class="you_count_number4"><b>Start!</b></div></button>
+                    </div>
+                    
+                    <div class="br_you_select_area">
+                        <div class="you_icon">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <p id="br_you_start" class="hide">First!</p>
+                        </div>
+                        <div class="you_count hide">
+                            <button class="you_count_number1"><div></div></button>
+                            <button class="you_count_number2"><div></div></button>
+                            <button class="you_count_number3"><div></div></button>
+                        </div>
+                    </div>
+                    
+                    <div class="br_totalresult">
+                        <h3 class="total_text">N o w . . .</h3>
+                        <h4 class="total_text">W i n &nbsp; : &nbsp;<b id="br_win"></b></h4>
+                        <h4 class="total_text">L o s e &nbsp; : &nbsp;<b id="br_lose"></b></h4>
+                        <br/><br/>
+                    </div>
+                    
+                    
+                </baskin>
+                
+                <script>
+                    
+                    $('.baskin .br_result_area button').on('click',function(){
+                       $('.br_result_area>button>.you_count_number4').html("<b>Restart!</b>");
+                       robbins_startFunc();
+                   });
+                    
+                    
+                    var com_numbers = [];
+                    var human_numbers = [];
+                    var total_numbers = [];
+                    
+                    var hum_27;
+                    var hum_28;
+                    var hum_29;
+                    
+                    var br_win = 0;
+                    var br_lose = 0;
+                    
+                    var com_final;
+                    var hum_final;
+                    
+                    
+                    
+                    
+                    function robbins_startFunc(){
+                        $('.br_com_select_area>.com_icon>p').removeClass('unhide').addClass('hide');
+                        $('.br_you_select_area>.you_icon>p').removeClass('unhide').addClass('hide');
+                        $('.br_result_area h1').removeClass('unhide').addClass('hide');
+                        
+                        $('baskin .you_count').removeClass('hide').addClass('unhide');
+                        
+                        $('baskin .you_count button:eq(2)').removeClass('thirtyTwo');
+                        
+                        
+                        trick();
+                        
+                        com_numbers = [];
+                        human_numbers = [];
+                        total_numbers = [];
+                        
+                        reset_coloring();
+                        reset_dis();
+                        
+                        
+                        
+                        
+                        
+
+                        
+                        
+                        
+                        if((Math.ceil(Math.random()*10)%2) == 0){
+                            computer_start();
+                        }
+                        else{
+                            human_start();
+                        }
+                        
+                        function computer_start (){
+                            $('#br_com_start').removeClass('hide').addClass('unhide');
+                            com_get_number();
+                        }
+                        function human_start (){
+                            $('#br_you_start').removeClass('hide').addClass('unhide');
+                            hum_display();
+                        }
+                    }
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    var com_number;
+                    
+                    function com_get_number(){
+                        com_number = Math.ceil(Math.random()*3);
+                        AI();
+                            console.log(com_number + "=comnumber");
+                        for (var i=com_number; i>0; i--){
+                            com_numbers.push(1+total_numbers.length);
+                            com_numbers.sort(function(a,b){return a-b;});
+                            total_numbers.push(1+total_numbers.length);
+                            total_numbers.sort(function(a,b){return a-b;});
+                        }
+                        console.log(com_numbers + '=com numbers arr');
+                        console.log(total_numbers + '=totalnumbers');
+                        reset_dis();
+                        com_display();
+                        hum_display();
+                        com_coloring();
+                        br_final();
+                    };
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    function human_get_number(n){
+                            var human_number = n;
+                                console.log(human_number + '=humannumber');
+                            for (var i=human_number; i>0; i--){
+                                human_numbers.push(1+total_numbers.length);
+                                human_numbers.sort(function(a,b){return a-b;});
+                                total_numbers.push(1+total_numbers.length);
+                                total_numbers.sort(function(a,b){return a-b;});
+                            }
+                            console.log(human_numbers +'=humannumbers arr');
+                            console.log(total_numbers + '=totalnumbers');
+                            human_coloring();
+                            com_get_number();
+                            br_final();
+                            AI();
+                        };
+                    
+                    $('.you_count_number1').click(function(){human_get_number(1)});
+                    $('.you_count_number2').click(function(){human_get_number(2)});
+                    $('.you_count_number3').click(function(){human_get_number(3)});
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    function com_coloring(){
+                        for (var i=0; i<com_numbers.length; i++){
+                            var comnum = com_numbers[i]-1
+                            var coloring_target = ".br_status_area .br_counted:eq(" + comnum + ")" ;               
+                            $(coloring_target).css('background-color','rgba(154, 74, 227, 0.87)');    
+                        };
+                    };
+                    
+                    
+                    function human_coloring(){
+                        for (var i=0; i<human_numbers.length; i++){
+                            var humnum = human_numbers[i]-1
+                            var coloring_target = ".br_status_area .br_counted:eq(" + humnum + ")" ;               
+                            $(coloring_target).css('background-color','rgba(163, 191, 244, 0.87)');    
+                        };
+                    };
+                    
+                    function reset_coloring(){
+                        for (var i=0; i<32; i++){
+                            var coloring_target = ".br_status_area .br_counted:eq(" + i + ")" ;               
+                            $(coloring_target).css('background-color','black');    
+                        };
+                    };
+                    
+                    
+                    
+                    
+                    
+                    function com_display(){
+                        
+                        for (var i=0; i<com_number&&total_numbers.length<32; i++){
+                        var com_dis_num = 'baskin .com_count .com_count_number:eq(' + i + ')'
+                        $(com_dis_num).html(total_numbers.length-com_number+i+1);
+                        }
+                    }
+
+                    function hum_display(){
+                        document.getElementsByClassName('you_count_number1')[0].innerHTML=total_numbers.length+1;
+                        document.getElementsByClassName('you_count_number2')[0].innerHTML=total_numbers.length+2;
+                        document.getElementsByClassName('you_count_number3')[0].innerHTML=total_numbers.length+3;
+                        
+                        if(total_numbers.length+3 >= 32){
+                        $('baskin .you_count button:eq(2)').addClass('thirtyTwo');}
+                    };
+                    
+                    
+                    function reset_dis(){
+                        document.getElementsByClassName('you_count_number1')[0].innerHTML='';
+                        document.getElementsByClassName('you_count_number2')[0].innerHTML='';
+                        document.getElementsByClassName('you_count_number3')[0].innerHTML='';
+                        document.getElementsByClassName('com_count_number')[0].innerHTML='';
+                        document.getElementsByClassName('com_count_number')[1].innerHTML='';
+                        document.getElementsByClassName('com_count_number')[2].innerHTML='';
+                    }
+                    
+                    
+                    
+                    
+                    function br_final(){
+                        com_final = com_numbers.some(val=>{return val==30});
+                        hum_final = human_numbers.some(val=>{return val==30});
+                        var hum_babo = human_numbers.some(val=>{return val==31});
+                        var com_babo = com_numbers.some(val=>{return val==31});
+                        if(com_final || hum_babo){
+                            $('.br_result_area h1.br_lose').removeClass('hide').addClass('unhide');
+                            $('baskin .you_count').removeClass('unhide').addClass('hide');
+                            br_lose = br_lose+0.5;
+                            
+                        }
+                    
+                        else if(hum_final && com_babo){
+                            $('.br_result_area h1.br_victory').removeClass('hide').addClass('unhide');
+                            $('baskin .you_count').removeClass('unhide').addClass('hide');
+                            br_win = br_win+0.5;
+                            
+                        };
+                        result();
+                    }
+                    
+                    
+                    
+                    
+                    
+                    
+                    function AI (){
+                        hum_27 = human_numbers.some(val=>{return val==27});
+                        hum_28 = human_numbers.some(val=>{return val==28});
+                        hum_29 = human_numbers.some(val=>{return val==29});
+                        
+                        if (hum_27&&!hum_28&&!hum_29){
+                            com_number=3;
+                        }
+                        else if(hum_28&&!hum_29){
+                            com_number=2;
+                        }
+                        else if(hum_29){
+                            com_number=1;
+                        }
+                    };
+                    
+                    
+                    
+                    function result(){
+                        document.getElementById('br_win').innerHTML=br_win;
+                        document.getElementById('br_lose').innerHTML=br_lose;
+                    }
+                    
+                    result();
+                    
+                    function trick(){
+                            if(!hum_final&&!com_final&&total_numbers.length>1){
+                                br_lose = br_lose +1;
+                                result();
+                            }
+                        };
+                    
+                </script>
+                
+            </div>
+            
+        </div>
+        
+        <div class="down_arrow">
+            <H1>
+                <div class="down_sign">
+                    <i class="fa fa-chevron-right fa-rotate-90" aria-hidden="true"></i><br />
+                    <i class="fa fa-chevron-right fa-rotate-90" aria-hidden="true"></i><br />
+                </div>
+            </H1>    
+        </div>
+        
+    </section>
+    
+    <div class="goTop">
+        <a href="#logoImg" class="fa-stack fa-lg">
+            <i class="fa fa-forward fa-rotate-270 fa-stack-1x" aria-hidden="true"></i>
+            <i class="fa fa-circle-o fa-stack-2x"></i>
+        </a>
+    </div>
+    
+    <footer>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo/logo.png" alt="logo" id="logoImg">
+                <span>Simple <br /> Random Game</span>
+            </a>
+        </div>
+        <div class="footer_right">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <span>contact : <a href="mailto:kind65505256@gmail.com">kind65505256@gmail.com</a></span> <br />
+            <i class="fa fa-registered" aria-hidden="true"></i>
+            <span>SUNDAY00 right reserved</span>
+        </div>
+    </footer>
+    <script src="link.js"></script>
+</body>
+</html>
